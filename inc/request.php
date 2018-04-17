@@ -10,7 +10,7 @@
         $route = explode('/', $route);
         $route = array_filter($route);
         if ($route[0] == 'index.php') {
-          $this->section = 'home';
+          $this->section = 'login';
         }
         elseif(count($route) == 1){
           $this->section = strtolower(array_shift($route));
@@ -22,7 +22,7 @@
         $this->argument = $route;
       }
       else {
-        $this->page = 'home';
+        $this->page = 'login';
       }
     }
 
