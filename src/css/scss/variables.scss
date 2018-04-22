@@ -1,0 +1,16 @@
+$background_color: white;
+$text_color_p: black;
+$main_container_color: #eee;
+$second_container:orange;
+$third_container: gray;
+
+
+body{
+  background: $background_color;
+  color: $text_color;
+}
+
+.container{
+  background:$main_container_color;
+  color: $text_color;
+}
