@@ -2,7 +2,7 @@
   // Definiciones
 	define('DS', DIRECTORY_SEPARATOR);
 	define('ROOT', realpath(dirname(__FILE__)) . DS);
-	define('URL', 'http://localhost');
+	define('URL', 'http://localhost/Neo_Maker');
 	session_start();
 	function sessionRequired(){
 			if (!isset($_SESSION['loggedin']) && $_SESSION['loggedin'] !== true){
