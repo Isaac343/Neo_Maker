@@ -1,2 +1,34 @@
+<<<<<<< HEAD
 body{background:#fff;color:#000;font-family:Dosis}.supbar{background:#4cd137}.main-container{background:#eee;color:#000;margin-top:70px}.incontainer{border-color:#4cd137}.login_block{background-color:gray;font-family:Dosis;padding:10px;height:500px;width:200px;margin-top:70px;margin-left:700px;margin-right:700px}.inerlogin_block{font-family:Dosis}
+=======
+body {
+  background: white;
+  color: black;
+  font-family: Dosis; }
+
+.supbar {
+  background: #4cd137; }
+
+.main-container {
+  background: #eee;
+  color: black;
+  margin-top: 70px; }
+
+.incontainer {
+  border-color: #4cd137; }
+
+.login_block {
+  background-color: gray;
+  font-family: Dosis;
+  padding: 10px;
+  height: 500px;
+  width: 200px;
+  margin-top: 70px;
+  margin-left: 700px;
+  margin-right: 700px; }
+
+.inerlogin_block {
+  font-family: Dosis; }
+
+>>>>>>> master
 /*# sourceMappingURL=main.css.map */
