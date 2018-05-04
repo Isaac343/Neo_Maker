@@ -1,1 +1,1 @@
-<?php require_once 'inc/view/sidebar.php'; ?>
+<h1>sidebar</h1>
