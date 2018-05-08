@@ -2,30 +2,20 @@ body{
   background: $background_color;
   color: $text_color_p;
   font-family: $font;
+  height: 100%;
 }
-
-.supbar{
-  background: $navbar_color;
+.sub_body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
-.main-container{
-  background:$main_container_color;
-  color: $text_color_p;
-  margin-top: $navbar_heigt;
-}
-.incontainer{
-  border-color: $navbar_color;
-
-}
-.login_block{
-  background-color: $third_container;
-  font-family: $font;
-  padding: $center_padding;
-  height: $login_height;
-  width: $login_width;
-  margin-top: $login_uo_margin;
-  margin-left: $login_side_margin;
-  margin-right: $login_side_margin;
-}
-.inerlogin_block{
-font-family: $font;
+.login_container{
+  text-align: center;
+  height: $login_container_height;
+  width: $login_container_with;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom:100px;
 }

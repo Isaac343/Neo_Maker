@@ -17,7 +17,7 @@
     }
     public function __destruct(){
 ?>
-<h1>template</h1>
+<h1></h1>
 <script src="<?php echo URL; ?>/src/js/archive.js" charset="utf-8"></script>
   </body>
 </html>
