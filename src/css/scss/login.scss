@@ -16,6 +16,6 @@ body{
   width: $login_container_with;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 100px;
+  margin-top: calc(50vh - 250px);
   margin-bottom:100px;
 }

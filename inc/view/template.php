@@ -7,7 +7,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>FORMMAKER</title>
+    <title>FORM-MAKER</title>
 
     <link rel="stylesheet" href="<?php echo URL; ?>/src/css/carbon.css">
     <link rel="stylesheet" href="<?php echo URL; ?>/src/css/main.css">

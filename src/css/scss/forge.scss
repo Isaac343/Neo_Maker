@@ -3,3 +3,7 @@ body{
   color: $text_color_p;
   font-family: $font;
 }
+.body_container{
+  margin: 10px;
+  background: $second_background_color;
+}
