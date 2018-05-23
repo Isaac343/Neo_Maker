@@ -1,10 +1,13 @@
 .anvil_body{
   background-color: $second_background_color;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 .side_bar_container{
   width: 300px;
   border: solid;
   border-radius: 5px;
   border-color: $navbar_color;
+}
+.bx--tag{
+  font-size: 18px;
 }

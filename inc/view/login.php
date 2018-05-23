@@ -1,10 +1,33 @@
 <?php
   if (isset($_POST['submit'])) {
-    echo "isset working action -> submit";
+    //echo "isset working action -> submit";
+    $fp = fopen('usuarios.csv','r'); //Abrir archivo base de datos de usuarios
+      //Obtencion de datos para login
+    $user =$_POST['username'];
+    $pass =$_POST['pass'];
+      //Construccion de array para lectura de datos
+    $file = 'usuarios.csv';
+    $csv = array_map('str_getcsv', file($file));
+    array_walk($csv, function(&$a) use ($csv) {
+      $a = array_combine($csv[0], $a);
+    });
+    array_shift($csv);
+    //print_r($csv);
+    $acuse_user = $csv[0]['username'];
+    $acuse_pass = $csv[0]['password'];
+
+    //Validacion de datos de usaurios
+    if (($user == $acuse_user) && ($pass == $acuse_pass)) {
+      session_start();
+      header('Location:forge');
+    }else {
+      header('Location:login');
+    }
+    fclose($fp);
 
   }
   elseif (isset($_POST['register'])) {
-    echo "isset working action -> register";
+    header('Location:register');
   }
   else {
 ?>
@@ -13,23 +36,23 @@
     <div class="login_container">
       <h2 class="login_title">FORM-MAKER</h2>
       <div class="bx--form-item">
-        <label for="user" class="bx--label">Usuario</label>
-        <input id="user" type="text" class="bx--text-input" placeholder="" />
+        <label for="user" class="bx--label" >Username</label>
+        <input id="user" name="username" type="text" class="bx--text-input" placeholder="" />
         <div class="bx--form-requirement">
-          NOmbre de usuario incorrecto
+          Wrong username
         </div>
       </div>
 
       <div class="bx--form-item">
-        <label for="pass" class="bx--label">Contraseña</label>
-        <input id="pass" type="password" class="bx--text-input" placeholder="" />
+        <label for="pass" class="bx--label" >Password</label>
+        <input id="pass" name="pass" type="password" class="bx--text-input" placeholder="" />
         <div class="bx--form-requirement">
-        Contraseña incorrecta
+          Wrong password
         </div>
       </div>
 
       <div class="bx--form-item">
-          <button class="bx--btn bx--btn--primary" type="submit" name="register">Registrarse</button>
+        <button class="bx--btn bx--btn--primary" type="submit" name="register">Register</button>
         <button class="bx--btn bx--btn--primary" type="submit" name="submit">Submit</button>
       </div>
     </div>

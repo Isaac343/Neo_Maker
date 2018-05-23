@@ -1,3 +1,4 @@
+<?php  ?>
 <div class="body_container">
   <?php include 'include/navbar.php'; ?>
 
@@ -13,7 +14,7 @@
       <?php include "gear/results.php" ?>
     </div>
     <div id="tab-panel-4" class="tab-4" role="tabpanel" aria-labelledby="tab-link-4" aria-hidden="true" hidden>
-      <h1>Función session_destroy()</h1>
+      <?php include "gear/logout.php" ?>
     </div>
   </div>
 </div>

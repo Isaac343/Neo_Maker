@@ -17,7 +17,7 @@
         <a id="tab-link-3" class="bx--tabs__nav-link" href="javascript:void(0)" role="tab" aria-controls="tab-panel-3" aria-selected="false">RESULTS</a>
       </li>
       <li class="bx--tabs__nav-item" data-target=".tab-4" role="presentation">
-        <a id="tab-link-4" class="bx--tabs__nav-link" href="javascript:void(0)" role="tab" aria-controls="tab-panel-4" aria-selected="false">EXIT</a>
+        <a id="tab-link-4" class="bx--tabs__nav-link" href="logout" role="tab" aria-controls="tab-panel-4" aria-selected="false">EXIT</a>
       </li>
       </li>
     </ul>

@@ -7,3 +7,12 @@
 .bx--tabs__nav-link{
   font-size: 20px;
 }
+.bx--tabs__nav-item:hover .bx--tabs__nav-link {
+  color: white;
+}
+.bx--tabs__nav-item--selected .bx--tabs__nav-link {
+  color: white !important;
+}
+ .bx--tabs__nav-item--selected{
+  color: white !important;
+  }
