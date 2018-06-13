@@ -1,4 +1,7 @@
 <?php
+    if ($_SESSION['loggedin']) {
+        header('Location: forge');
+    }
   if (isset($_POST['submit'])) {
     //echo "isset working action -> submit";
     $fp = fopen('usuarios.csv','r'); //Abrir archivo base de datos de usuarios
@@ -12,16 +15,19 @@
       $a = array_combine($csv[0], $a);
     });
     array_shift($csv);
-    //print_r($csv);
+
     $acuse_user = $csv[0]['username'];
     $acuse_pass = $csv[0]['password'];
 
     //Validacion de datos de usaurios
     if (($user == $acuse_user) && ($pass == $acuse_pass)) {
       session_start();
+      $_SESSION['loggedin'] = true;
+      $_SESSION['username'] = $user;
       header('Location:forge');
     }else {
       header('Location:login');
+
     }
     fclose($fp);
 
@@ -35,6 +41,7 @@
   <form class="" action="login" method="post">
     <div class="login_container">
       <h2 class="login_title">FORM-MAKER</h2>
+      <br>
       <div class="bx--form-item">
         <label for="user" class="bx--label" >Username</label>
         <input id="user" name="username" type="text" class="bx--text-input" placeholder="" />
@@ -53,7 +60,7 @@
 
       <div class="bx--form-item">
         <button class="bx--btn bx--btn--primary" type="submit" name="register">Register</button>
-        <button class="bx--btn bx--btn--primary" type="submit" name="submit">Submit</button>
+        <button class="bx--btn bx--btn--primary" type="submit" name="submit">Login</button>
       </div>
     </div>
   </form>
