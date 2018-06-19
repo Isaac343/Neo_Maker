@@ -7,6 +7,12 @@
       <div class="container" id="container_to_drop" ondragstart="dragp_inside_container(event,code_list) "ondragover="allowDrop(event)" ondrop="drop(event)">
 
       </div>
+
+
+
+      <button type="button" name="button" onclick="check(event)">Chek code
+
+     </button>
     </div>
   </div>
 </div>

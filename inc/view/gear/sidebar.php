@@ -12,6 +12,7 @@
       ev.preventDefault();
       var block_id = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(block_id).cloneNode(true));
+      form_name = prompt('Set form name: ');
       switch (block_id) {
             case "title":
                 text_value = prompt("Insert your form's name:");
@@ -72,7 +73,7 @@
                 checkbox_quantity = prompt("Number of checkbox");
                 var check_temp = '';
                 for (var j = 0; j < checkbox_quantity; j++) {
-                    text_value = prompt("Insert text to display next to checkbox");
+                    text_value = prompt("Insert text to display next to checkbox "+j);
                     check_name = prompt("Set checkbox name");
                     check_value =prompt("Set checkbox value");
                     code_value = '<input type="checkbox" name="'+check_name+' "value="'+check_value+'">'+text_value+'<br>\n';
@@ -80,8 +81,18 @@
                 }
                 break;
             case "radio":
+                radio_quantity = prompt("Number of checkbox");
+                var radio_temp = '';
+                for (var k = 0; k < checkbox_quantity; k++) {
+                    text_value = prompt("Insert text to display next to checkbox "+k);
+                    radio_name = prompt("Set checkbox name");
+                    radio_value =prompt("Set checkbox value");
+                    code_value = '<input type="radio" name="'+radio_name+' "value="'+radio_value+'">'+text_value+'<br>\n';
+                    radio_temp = radio_temp + radio_value;
+                }
                 break;
             case "send":
+                code_value = '<button type="submit" form="'+form_name+'" value="Submit">SEND</button>';
                 break;
           default:
               alert("something else");
@@ -97,6 +108,10 @@
       ev.dataTransfer.setData("text", ev.target.id);
   }
 
+  function check(ev){
+        alert(code_value);
+
+  }
  var code_list = [];
 </script>
 <ul data-accordion class="bx--accordion">
