@@ -1,8 +1,9 @@
 <?php
-    if ($_SESSION['loggedin']) {
-        header('Location: forge');
-    }
+
   if (isset($_POST['submit'])) {
+      if ($_SESSION['loggedin']) {
+          header('Location: forge');
+      }
     //echo "isset working action -> submit";
     $fp = fopen('usuarios.csv','r'); //Abrir archivo base de datos de usuarios
       //Obtencion de datos para login
